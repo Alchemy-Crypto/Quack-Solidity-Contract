@@ -91,6 +91,7 @@ contract QuackContract {
     }
     function distributeCoin(string memory _slackId,uint amount) public returns(bool success) {
         balances[_slackId] += amount;
+        currentHolders.push(_slackId);
         return true;
     }       
 
